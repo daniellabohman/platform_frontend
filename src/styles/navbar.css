@@ -1,0 +1,30 @@
+/* frontend/styles/navbar.css */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    padding: 20px 50px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar.sticky {
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background when scrolling */
+  }
+  
+  .navbar a {
+    color: white;
+    font-size: 1.2rem;
+    margin-left: 20px;
+  }
+  
+  .navbar a:hover {
+    color: #ff6600;
+  }
+  
+  

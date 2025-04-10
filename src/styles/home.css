@@ -1,0 +1,299 @@
+/* === General Layout === */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #FFEFD0;
+  color: #333;
+}
+/* === Header === */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #F7F5F1;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+  flex-wrap: wrap;
+}
+
+.site-header .left,
+.site-header .right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.site-header .logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #ff6600;
+  text-decoration: none;
+}
+
+.site-header nav {
+  display: flex;
+  justify-content: center; /* Center items horizontally */
+  gap: 20px;
+}
+
+.site-header nav a {
+  color: #ccc;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 6px 8px;
+  font-size: 1.2rem;
+}
+
+.site-header nav a:hover {
+  color: #fff;
+}
+
+/* Spacing between Login and Sign Up buttons */
+.site-header .auth-buttons {
+  display: flex;
+  gap: 20px; /* Add gap between login and signup */
+}
+
+.site-header .auth-buttons a {
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.site-header .login {
+  background: transparent;
+  color: #000000;
+  border: 1px solid #666;
+}
+
+.site-header .signup {
+  background: #ff6600;
+  color: #fff;
+  border: none;
+}
+
+.site-header .search {
+  padding: 10px 40px 10px 20px;  /* More padding on the right for icon space */
+  border-radius: 30px;  /* Rounded border for a modern look */
+  border: 1px solid #ddd;  /* Light border */
+  background-color: #fff;  /* White background */
+  font-size: 16px;
+  width: 250px;  /* Adjust width */
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.site-header .search:focus {
+  border-color: #ff6600;  /* Highlight the border on focus */
+  box-shadow: 0 0 5px rgba(255, 102, 0, 0.3);  /* Add a subtle glow effect */
+}
+
+/* Add a search icon inside the search field */
+.site-header .search-container {
+  position: relative;
+}
+
+.site-header .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #888;
+}
+
+/* Responsive header */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .site-header .right {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Hero Section */
+
+.hero {
+  background: linear-gradient(120deg, #ff6600, #f7f5f1);  /* Gradient background for more visual appeal */
+  color: #fff;
+  padding: 100px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.hero-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+/* Modern Find Courses Button */
+.cta-button {
+  background-color: #ff6600;
+  color: white;
+  font-size: 1.2rem;
+  padding: 12px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #e55b00;
+  transform: scale(1.05);  /* Slight zoom effect on hover */
+}
+
+/* Smooth scroll to About Section */
+html {
+  scroll-behavior: smooth;
+}
+
+/* === About Section === */
+.about-section {
+  padding: 60px 20px;
+  background-color: #f7f5f1;
+  text-align: center;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* === General Layout === */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.course-section {
+  padding: 60px 0;
+  background: #fff;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  padding-top: 20px;
+}
+
+/* Courses Section */
+.courses-section {
+  padding: 60px 40px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.courses-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  justify-content: center;
+}
+
+.course-card {
+  background: #fff;
+  border: 1px solid #eaeaea;
+  border-radius: 12px;
+  padding: 20px;
+  transition: box-shadow 0.2s ease;
+  text-align: left;
+}
+
+.course-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.course-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-card .desc {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.course-card .footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.course-card .price {
+  color: #ff6600;
+}
+
+
+/* For smaller screens (Mobile-first design) */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .cta-button {
+    padding: 12px 20px;
+  }
+
+  .course-grid {
+    grid-template-columns: 1fr;
+  }
+}
