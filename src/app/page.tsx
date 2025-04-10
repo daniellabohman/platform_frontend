@@ -35,6 +35,7 @@ const Home = () => {
     <div>
       <Header />
 
+      {/* Hero Section */}
       <section className="hero">
         <div className="container hero-content">
           <h1>Find the Best Freelancers for Your Projects</h1>
@@ -43,17 +44,35 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="freelancer-section"> {/* Changed class name */}
+      {/* Dark Blocker Section */}
+      <section className="dark-blocker">
+      {/*<img src="/path-to-your-logo.png" alt="Logo" className="dark-blocker-logo" />*/}
+    
+      </section>
+
+      {/* About Section */}
+      <section className="about-section">
         <div className="container">
           <h2 className="section-title">About FreelanceHub</h2>
-          <p>FreelanceHub helps freelancers and entrepreneurs manage their work, bookings, invoicing, and subscriptions in one easy-to-use platform. Whether you're a freelancer managing your business or a client looking for a reliable expert, FreelanceHub is your go-to solution.</p>
-          <div className="freelancer-grid"> {/* Changed to freelancer-grid */}
+          <p>
+            FreelanceHub helps freelancers and entrepreneurs manage their work, bookings, invoicing, and subscriptions in one easy-to-use platform. 
+            Whether you're a freelancer managing your business or a client looking for a reliable expert, FreelanceHub is your go-to solution.
+          </p>
+          <a href="#freelancers" className="btn">Get Started</a>
+        </div>
+      </section>
+
+      {/* Freelancer Section */}
+      <section className="freelancer-section">
+        <div className="container">
+          <h2 className="section-title">Meet Our Freelancers</h2>
+          <div className="freelancer-grid">
             {instructors.length > 0 ? (
               instructors.map((instructor) => (
                 <FreelancerCard key={instructor.id} freelancer={instructor} />
               ))
             ) : (
-              <p>No freelancers available.</p>
+              <p>No freelancers available at the moment.</p>
             )}
           </div>
         </div>

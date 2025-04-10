@@ -29,4 +29,5 @@ const FreelancerCard = ({ freelancer }: FreelancerCardProps) => {
   );
 };
 
+
 export default FreelancerCard;
