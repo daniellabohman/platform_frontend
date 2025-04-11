@@ -1,29 +1,27 @@
 "use client";
 
+import Login from "@/components/Login";
 import { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
 
-const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+const LoginPage = () => {
   const [error, setError] = useState("");
   const router = useRouter();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError("");
-  
+  const handleSubmit = async (email: string, password: string) => {
+    setError("");  // Clear previous error
+
     try {
       const response = await axios.post("http://localhost:5000/login", {
         email,
         password,
       });
-  
+
       const token = response.data.access_token;
       localStorage.setItem("token", token);
       axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
-  
+
       router.push("/courses");
     } catch (err: any) {
       const msg = err?.response?.data?.message || "Login failed. Check your credentials.";
@@ -35,25 +33,9 @@ const Login = () => {
     <div>
       <h1>Login</h1>
       {error && <p style={{ color: "red" }}>{error}</p>}
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          placeholder="Email"
-          required
-        />
-        <input
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          placeholder="Password"
-          required
-        />
-        <button type="submit">Login</button>
-      </form>
+      <Login onSubmit={handleSubmit} /> {/* Use the Login component with styles */}
     </div>
   );
 };
 
-export default Login;
+export default LoginPage;

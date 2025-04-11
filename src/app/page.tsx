@@ -38,9 +38,11 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero">
         <div className="container hero-content">
-          <h1>Find the Best Freelancers for Your Projects</h1>
-          <p>Browse expert freelancers and specialists for your business or personal needs.</p>
-          <a href="/freelancers" className="cta-button">Find a Freelancer</a>
+          <h1>Find de bedste eksperter</h1>
+          <p>
+            Gennemse dygtige eksperter og specialister til dine forretnings- eller personlige behov. 
+          </p>
+          <a href="/freelancers" className="cta-button">Find Ekspert</a>
         </div>
       </section>
 
@@ -53,19 +55,19 @@ const Home = () => {
       {/* About Section */}
       <section className="about-section">
         <div className="container">
-          <h2 className="section-title">About FreelanceHub</h2>
+          <h2 className="section-title">Om nExpertia</h2>
           <p>
-            FreelanceHub helps freelancers and entrepreneurs manage their work, bookings, invoicing, and subscriptions in one easy-to-use platform. 
-            Whether you're a freelancer managing your business or a client looking for a reliable expert, FreelanceHub is your go-to solution.
+          nExperita hjælper freelancere og iværksættere med at administrere deres arbejde, bookinger, fakturering og abonnementer – alt sammen på én brugervenlig platform.
+          Uanset om du er freelancer, der styrer din forretning, eller en kunde, der leder efter en pålidelig ekspert til dit hobbyprojekt eller til din virksomhed, kan nExpertia hjælpe dig.
           </p>
-          <a href="#freelancers" className="btn">Get Started</a>
+          <a href="#freelancers" className="btn">Kom igang</a>
         </div>
       </section>
 
       {/* Freelancer Section */}
       <section className="freelancer-section">
         <div className="container">
-          <h2 className="section-title">Meet Our Freelancers</h2>
+          <h2 className="section-title">Mød vores freeelancere</h2>
           <div className="freelancer-grid">
             {instructors.length > 0 ? (
               instructors.map((instructor) => (

@@ -24,13 +24,13 @@ const Header = () => {
           nExpertia
         </Link>
         <nav>
-          <Link href="/courses">Courses</Link>
-          <Link href="/about">About</Link>
+          <Link href="/instructors">Eksperter</Link>
+          <Link href="/about">Vores Mission</Link>
         </nav>
       </div>
 
       <div className="right">
-        <input type="text" className="search" placeholder="Search courses..." />
+        <input type="text" className="search" placeholder="Find Ekspert" />
         {!isLoggedIn ? (
           <div className="auth-buttons">
             <Link href="/login" className="login">
